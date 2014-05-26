@@ -166,7 +166,7 @@
         <cuboid min="140,20,-4" max="145,16,1"/>
     </apply>
     <apply block="deny-lava">
-        <rectangle min="-oo" max="oo"/>
+        <rectangle min="-oo,-oo" max="oo,oo"/>
     </apply>
 </regions>
 <modes>
