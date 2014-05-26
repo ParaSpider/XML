@@ -104,6 +104,9 @@
     <filter name="Tier-5-only">
         <block>95:4</block>
     </filter>
+    <filter name="no-lava">
+        <not><block>lava</block></not>
+    </filter>
 </filters>
 <regions>
     <union name="spawns">
@@ -118,7 +121,7 @@
         </negative>
     </apply>
     <union name="portals">
-        <cylinder base="142.5,16,-1.5" radius="2" height="2"/>
+        <cylinder base="142.5,16,-1.5" radius="4" height="2"/>
         <cylinder base="142.5,27,27.5" radius="2" height="2"/>
     </union>
     <apply block="deny-blocks">
@@ -161,6 +164,9 @@
     </apply>
     <apply block="deny-all">
         <cuboid min="140,20,-4" max="145,16,1"/>
+    </apply>
+    <apply block="deny-lava">
+        <rectangle min="-oo" max="oo"/>
     </apply>
 </regions>
 <modes>
