@@ -8,10 +8,10 @@
 <authors>
     <author>orky48</author>
     <author>OllieGamerZ</author>
+    <author>Captain_Elliott</author>
 </authors>
 <contributors>
     <contributor contribution="Back wall design and feedback">Lyzak</contributor>
-    <contributor contribution="Moral help">Captain_Elliott</contributor>
     <contributor contribution="Aestheics and moral help">Push_red_button</contributor>
 </contributors>
 <teams>
@@ -262,12 +262,13 @@
     </rule>
 </blockdrops>
 <renewables>
-    <renewable rate="1" grow="false" particles="false" sound="false" avoid-entities="false">
+    <renewable rate="1" grow="false" particles="true" sound="true" avoid-entities="false">
         <region>
             <cuboid min="183,14,26" max="100,19,57"/>
         </region>
         <renew>anvil</renew>
         <renew>iron block</renew>
+        <renew>bookshelf</renew>
         <replace>air</replace>
     </renewable>
 </renewables>
@@ -279,7 +280,7 @@
                 `rThis map is a `a`lAttack/Defend the Monument `r(DTM) map
             </line>
             <line>
-                The objective for the attackers is to grab the wool on the other team's side and return it to your base. Defends must guard it for 20 minutes
+                The objective for the attackers is to destroy the monument on the other team's side. Defends must guard it for 20 minutes
             </line>
         </message>
         <teleport>
