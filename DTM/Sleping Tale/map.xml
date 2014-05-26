@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <map proto="1.3.2">
 <name>Sleeping Tale</name>
-<version>2.0.4</version>
+<version>2.0.5</version>
 <objective>
     Attackers must destroy the monument within 20 minutes. Defenders must defend it.
 </objective>
@@ -15,13 +15,13 @@
     <contributor contribution="Aestheics and moral help">Push_red_button</contributor>
 </contributors>
 <teams>
-    <team color="blue" max="12" max-overfill="12">Defenders</team>
-    <team color="dark red" max="8" max-overfill="8">Attackers</team>
+    <team color="blue" max="12" max-overfill="10">Defenders</team>
+    <team color="dark red" max="8" max-overfill="12">Attackers</team>
 </teams>
 <kits>
     <kit name="spawn">
         <item slot="2">wood pickaxe</item>
-        <item slot="8" amount="20">golden carrot</item>
+        <item slot="8" amount="20">apple</item>
         <potion duration="2" amplifier="1">heal</potion>
     </kit>
     <kit name="Tier-1" parents="spawn">
@@ -235,6 +235,7 @@
         <drops>
             <item amount="2">iron ingot</item>
         </drops>
+        <wrongtool>true</wrongtool>
     </rule>
     <!-- Defenders Drops -->
     <rule>
@@ -257,7 +258,7 @@
             <item amount="16">log</item>
             <item amount="5">iron ingot</item>
         </drops>
-    <wrongtool>true</wrongtool>
+        <wrongtool>true</wrongtool>
     </rule>
 </blockdrops>
 <renewables>
