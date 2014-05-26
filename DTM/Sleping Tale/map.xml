@@ -264,7 +264,7 @@
 <renewables>
     <renewable rate="1" grow="false" particles="false" sound="false" avoid-entities="false">
         <region>
-            <cuboid min="165,14,58" max="186,18,95"/>
+            <cuboid min="183,14,26" max="100,19,57"/>
         </region>
         <renew>anvil</renew>
         <renew>iron block</renew>
