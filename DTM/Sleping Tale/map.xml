@@ -15,8 +15,8 @@
     <contributor contribution="Aestheics and moral help">Push_red_button</contributor>
 </contributors>
 <teams>
-    <team color="blue" max="12" max-overfill="10">Defenders</team>
     <team color="dark red" max="8" max-overfill="12">Attackers</team>
+    <team color="blue" max="12" max-overfill="10">Defenders</team>
 </teams>
 <kits>
     <kit name="spawn">
