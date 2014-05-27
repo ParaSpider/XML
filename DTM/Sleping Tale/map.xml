@@ -263,7 +263,7 @@
     </rule>
 </blockdrops>
 <renewables>
-    <renewable rate="1" grow="false" particles="true" sound="true" avoid-entities="ture">
+    <renewable rate="1" grow="false" particles="true" sound="true" avoid-entities="true">
         <region>
             <cuboid min="183,14,26" max="100,19,57"/>
         </region>
