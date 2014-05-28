@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <map proto="1.3.2">
 <name>Sleeping Tale</name>
-<version>2.1.1</version>
+<version>2.1.2</version>
 <objective>
     Attackers must destroy the monument within 20 minutes. Defenders must defend it.
 </objective>
@@ -15,8 +15,8 @@
     <contributor contribution="Aestheics and moral help">Push_red_button</contributor>
 </contributors>
 <teams>
-    <team color="blue" max="12" max-overfill="12">Defenders</team>
-    <team color="dark red" max="8" max-overfill="8">Attackers</team>
+    <team color="dark red" max="12" max-overfill="12">Attackers</team>
+    <team color="blue" max="10" max-overfill="10">Defenders</team>
 </teams>
 <kits>
     <kit name="spawn">
@@ -40,17 +40,19 @@
         <chestplate>iron chestplate</chestplate>
         <leggings>chainmail leggings</leggings>
     </kit>
-    <kit name="Tier-3" parents="spawn">
+    <kit name="Tier-3" parents="spawn" force="true">
         <item slot="0" enchantment="damage all:1">stone sword</item>
         <item slot="1">bow</item>
+        <item slot="2">stone pickaxe</item>
         <item slot="28" amount="48">arrow</item>
         <item slot="3" amount="48">log</item>
         <chestplate>iron chestplate</chestplate>
         <leggings enchantment="protection environmental:1">chainmail leggings</leggings>
     </kit>
-    <kit name="Tier-4" parents="spawn">
+    <kit name="Tier-4" parents="spawn" force="true">
         <item slot="0" enchantment="damage all:1">stone sword</item>
         <item slot="1">bow</item>
+        <item slot="2">stone pickaxe</item>
         <item amount="64" slot="28">arrow</item>
         <item amount="64" slot="3">log</item>
         <helmet enchantment="protection projectile:1">leather helmet</helmet>
@@ -58,9 +60,10 @@
         <leggings enchantment="protection environmental:1">chainmail leggings</leggings>
         <boots enchantment="protection projectile:1">leather boots</boots>
     </kit>
-    <kit name="Tier-5" parents="spawn">
+    <kit name="Tier-5" parents="spawn" force="true">
         <item slot="0" enchantment="damage all:1">iron sword</item>
         <item slot="1" enchantment="arrow knockback:1;arrow damage:1">bow</item>
+        <item slot="2">iron pickaxe</item>
         <item slot="28" amount="64">arrow</item>
         <item slot="3" amount="64">log</item>
         <helmet enchantment="protection environmental:1">iron helmet</helmet>
@@ -122,7 +125,7 @@
         </negative>
     </apply>
     <union name="portals">
-        <cylinder base="142.5,16,-1.5" radius="4" height="2"/>
+        <cylinder base="142.5,16,-1.5" radius="3" height="2"/>
         <cylinder base="142.5,27,27.5" radius="2" height="2"/>
     </union>
     <apply block="deny-blocks">
