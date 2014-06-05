@@ -95,15 +95,25 @@
     <!-- For timed kits --> 
     <filter name="Tier-1-only">
         <block>95:0</block>
+        <block>95:1</block>
+        <block>95:2</block>
+        <block>95:3</block>
+        <block>95:4</block>
     </filter>
     <filter name="Tier-2-only">
         <block>95:1</block>
+        <block>95:2</block>
+        <block>95:3</block>
+        <block>95:4</block>
     </filter>
     <filter name="Tier-3-only">
         <block>95:2</block>
+        <block>95:3</block>
+        <block>95:4</block>
     </filter>
     <filter name="Tier-4-only">
         <block>95:3</block>
+        <block>95:4</block>
     </filter>
     <filter name="Tier-5-only">
         <block>95:4</block>
