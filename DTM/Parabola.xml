@@ -1,0 +1,186 @@
+<map proto="1.0.0">
+    <name>Parabola</name>
+    <version>1.0.0</version>
+    <objective>
+        Be the first team to destory both of the other team monuments
+    </objective>
+    <authors>
+        <author contribution="Overall Building">Xanpendio</author>
+        <author contributior="Minor Building and XML">triplezko</author>
+    </authors>
+    <rules>
+        <rule>No Teamgriefing</rule>
+        <rule>No Blocking team spawns</rule>
+        <rule>Don't Hoard team supplies</rule>
+    </rules>
+    <teams>
+        <team color="blue" max="50">Blue Team</team>
+        <team color="dark red" max="50">Red Team</team>
+    </teams>
+    <kits>
+        <kit name="spawn">
+            <item slot="0">stone sword</item>
+            <item slot="1" enchantment="arrow infinite:1">bow</item>
+            <item slot="2">diamond pickaxe</item>
+            <item slot="3" enchantment="dig speed:3">iron pickaxe</item>
+            <item slot="4">iron axe</item>
+            <item slot="5" amount="64">log:1</item>
+            <!-- Spruce Leaves -->
+            <item slot="6" amount="64">18:1</item>
+            <item slot="7" amount="64">cooked beef</item>
+            <item slot="8">shear</item>
+            <item slot="28">arrow</item>
+            <!-- Spawn killing protection -->
+            <potion duration="10" amplifier="4">damage resistance</potion>
+            <potion duration="5" amplifier="1">heal</potion>
+        </kit>
+        <kit name="red" parents="spawn">
+            <helmet color="cd0000">leather helmet</helmet>
+            <chestplate color="cd0000">leather chestplate</chestplate>
+            <leggings color="cd0000">leather leggings</leggings>
+            <boots color="cd0000">leather boots</boots>
+        </kit>
+        <kit name="blue" parents="spawn">
+            <helmet color="0066cc">leather helmet</helmet>
+            <chestplate color="0066cc">leather chestplate</chestplate>
+            <leggings color="0066cc">leather leggings</leggings>
+            <boots color="0066cc">leather boots</boots>
+        </kit>
+    </kits>
+    <spawns>
+        <spawn team="blue" kit="blue" yaw="-90">
+            <cuboid min="89,42,-14" max="93,45,-10"/>
+        </spawn>
+        <spawn team="red" kit="red" yaw="90">
+            <cuboid min="-89,42,14" max="-43,45,10"/>
+        </spawn>
+        <default yaw="0">
+            <cuboid min="2,62,-66" max="-2,65,-62"/>
+        </default>
+    </spawms>
+    <destroyables completion="100%">
+        <destroyable name="Hilltop Monument" owner="red" materials="43:5;wool:15">
+            <cuboid min="-117,61,-27" max="-111,67,-21"/>
+        </destroyable>
+        <destroyable name="Lakeside Monument" owner="red" materials="43:5;wool:15">
+            <cuboid min="-55,43,26" max="-49,49,32"/>
+        </destroyable>
+        <destroyable name="Hilltop Monument" owner="blue" materials="43:5;wool:11">
+            <cuboid min="111,61,21" max="117,67,27"/>
+        </destroyable>
+        <destroyable name="Lakeside Monument" owner="blue" materials="43:5;wool:11">
+            <cuboid min="55,43,-26" max="49,49,-32"/>
+        </destroyable>
+    </destroyables>
+    <filters>
+        <filter name="only-blue" parents="deny-players deny-world">
+            <allow>
+                <team>blue</team>
+            </allow>
+        </filter>
+        <filter name="only-red" parents="deny-players deny-worlds">
+            <allow>
+                <team>red</team>
+            </allow>
+        </filter>
+        <filter name="deny-chest">
+            <deny>
+                <block>chest</block>
+                <block>trapped chest</block>
+            </deny>
+        </filter>
+    </filters>
+    <regions>
+        <union name="supply chests">
+            <!-- Blue Team -->
+            <!-- Potato Storage -->
+            <cuboid min="27,27.-25" max="27,27,-29"/>
+            <cuboid min="29,27,-31" max="33,27,-31"/>
+            <cuboid min="35,27,-29" max="35,28,-25"/>
+            <!-- Archer Tower -->
+            <cuboid min="24,28,2" max="24,28,6"/>
+            <cuboid min="22,28,8" max="18,28,8"/>
+            <cuboid min="22,39,8" max="18,39,8"/>
+            <cuboid min="16,39,6" max="16,39,2"/>
+            <cuboid min="18,39,0" max="19,39,0"/>
+            <!-- Supply Room -->
+            <cuboid min="81,45,22" max="81,42,32"/>
+            <cuboid min="80,45,33" max="74,42,33"/>
+            <cuboid min="73,45,32" max="73,42,22"/>
+            <!-- Red Team -->
+            <!-- Potato Storage -->
+            <cuboid min="-27,27.25" max="-27,27,29"/>
+            <cuboid min="-29,27,31" max="-33,27,31"/>
+            <cuboid min="-35,27,29" max="-35,28,25"/>
+            <!-- Archer Tower -->
+            <cuboid min="-24,28,-2" max="-24,28,-6"/>
+            <cuboid min="-22,28,-8" max="-18,28,-8"/>
+            <cuboid min="-22,39,-8" max="-18,39,-8"/>
+            <cuboid min="-16,39,-6" max="-16,39,-2"/>
+            <cuboid min="-18,39,-0" max="-19,39,-0"/>
+            <!-- Supply Room -->
+            <cuboid min="-81,45,-22" max="-81,42,-32"/>
+            <cuboid min="-80,45,-33" max="-74,42,-33"/>
+            <cuboid min="-73,45,-32" max="-73,42,-22"/>
+        </union>
+        <apply block="deny-all" message="You may not modify the void!">
+            <negative name="playable-inverse">
+                <rectangle min="-128,-36" max="128,36"/>
+            </negative>
+        </apply>
+        <apply enter="only-red" message="You may not enter the Red Team's Spawn!">
+            <cuboid min="-81,38,4" max="-101,65,19"/>
+        </apply>
+        <apply enter="only-blue" message="You may not enter the Blue Team's Spawn!">
+            <cuboid min="81,38,-4" max="101,65,-19"/>
+        </apply>
+        <apply block="deny-all" message="You may not modify Spawn!">
+            <cuboid min="-81,38,4" max="-101,65,19"/>
+            <cuboid min="81,38,-4" max="101,65,-19"/>
+        </apply>
+        <apply block-break="deny-chest" message="You may not break team supplies chest">
+            <region name="supply chests"/>
+        </apply>
+    </regions>
+    <toolrepair>
+        <tool>stone sword</tool>
+        <tool>bow</tool>
+        <tool>diamond pickaxe</tool>
+        <tool>iron pickaxe</tool>
+        <tool>iron axe</tool>
+        <tool>shear</tool>
+    </toolrepair>
+    <itemremove>
+        <item>stone sword</item>
+        <item>bow</item>
+        <item>diamond pickaxe</item>
+        <item>iron pickaxe</item>
+        <item>iron axe</item>
+        <item>18:1</item>
+        <item>cooked beef</item>
+        <item>shear</item>
+        <item>arrow</item>
+        <item>leather helmet</item>
+        <item>leather chestplate</item>
+        <item>leather legging</item>
+        <item>leather boot</item>
+        <item>44:5</item>
+        <item>wool:11</item>
+        <item>wool:15</item>
+        <item>potato</item>
+        <item>golden boot</item>
+        <item>chainmail chestplate</item>
+        <item>piston</item>
+        <item>sticky piston</item>
+        <item>redstone</item>
+        <item>button</item>
+        <item>70</item>
+        <item>72<item>
+        <item>iron helmet</item>
+        <item>iron chestplate</item>
+        <item>iron legging</item>
+        <item>iron boot</item>
+    </itemremove>
+    <timelock>on</itemlock>
+    <maxbuildheight>100</maxbuildheight>
+</map>
