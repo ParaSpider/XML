@@ -3,7 +3,7 @@
 <modes>
     <mode after="5m" material="0" name="`eWall removed!"/>
 </modes>
-<destroyables name="wall" owner="Team" show="false" materials="bedrock" completion="0" mode-changes="true">
+<destroyables owner="Team" show="false" materials="bedrock" completion="0" mode-changes="true">
     <cuboid name="bedrock-wall" min="x,y,z" max="x,y,z"/>
 </destroyables>
 </map>
