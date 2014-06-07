@@ -1,2 +1,6 @@
 <?xml version="1.0"?>
-<map proto=1.3.2">
+<map proto="1.3.2">
+<modes>
+    <mode after="5m" material="0" name="`eWall removed!"/>
+</modes>
+<destroyables name="wall" owner="Team" show="false" materials="bedrock" completion="0"
