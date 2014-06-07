@@ -1,0 +1,26 @@
+<filter name="TNT-only">
+    <not>
+        <all>
+            <block>Block Name</block>
+        <any>
+            <filter name="allow-players"/>
+            <filter name="deny-all"/>
+        </any>
+        </all>
+    </not>
+</filter>
+<!-- This only allows you to break items via TNT or other world events. -->
+
+<filter name="Not-TNT">
+    <not>
+        <all>
+            <any>
+                <block>Block Name</block>
+            </any>
+            <any>
+                <filter name="allow-world"/>
+                <filter name="deny-all"/>
+            </any>
+        </all>
+    </not>
+</filter>
