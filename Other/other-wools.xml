@@ -1,2 +1,32 @@
 <?xml version="1.0"?>
 <map proto="1.3.2">
+<!--So you would need to have a "wool" room with the block in and then a little area to place that block say in spawn?-->
+<filters>
+    <filter name="wool-block">
+        <block>Block Name</block>
+    </filter>
+</filters>
+<regions>
+    <apply block="wool-block" message="You may only place [Name] blocks here!">
+        <cuboid name="Wool-converter" min="x,y,z" max="x,y,z"/>
+    </apply>
+</regions>
+<blockdrops>
+    <rule>
+        <region>
+            <region name="Wool-converter"/>
+        </region>
+        <filter>
+            <block>[First block name]</block>
+        </filter>
+        <drops>
+            <item damage="a">wool</item>
+        </drops>
+    </rule>
+</blockdrops>
+<wools>
+   <wool team="blue" color="a">
+       <block>x,y,z</block>
+   </wool>
+</wools>
+</map>
