@@ -1,0 +1,29 @@
+<filters>
+    <filter name="no-void">
+        <deny>
+            <void/>
+        </deny>
+    </filter>
+	<filter name="only-red">
+		<team>red</team>
+	</filter>
+	<filter name="only-blue">
+		<team>blue</team>
+	</filter>
+	<filter name="allow-some">
+		<block>web</block>
+		<block>wool</block>
+	</filter>
+	<filter name="red-special">
+	    <all>
+	        <team>red</team>
+	        <filter name="allow-some"/>
+	    </all>
+	</filter>
+	<filter name="blue-special">
+	    <all>
+	        <team>blue</team>
+	        <filter name="allow-some"/>
+	    </all>
+	</filter>
+</filters>
