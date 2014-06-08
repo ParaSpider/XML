@@ -1,0 +1,21 @@
+<filters>
+    <filter name="no-void" parents="allow-all">
+        <deny><void/></deny>
+    </filter>
+	<filter name="only-red" parents="deny-players">
+		<allow>
+			<team>red</team>
+		</allow>
+	</filter>
+	<filter name="only-blue" parents="deny-players">
+		<allow>
+			<team>blue</team>
+		</allow>
+	</filter>
+	<filter name="allow-some" parents="deny-all">
+	    <allow>
+		    <block>web</block>
+			<block>wool</block>
+		</allow>
+	</filter>
+</filters>
