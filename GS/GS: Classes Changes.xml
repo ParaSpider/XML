@@ -112,7 +112,7 @@
             <potion duration="oo" amplifier="2" ambient="true">jump</potion>
             <potion duration="oo" amplifier="1" ambient="true">speed</potion>
             <potion duration="300" amplifier="2" ambient="true">invisibility</potion>
-            <item slot="0" enchantment="durability:1"name="`d`lGrapling Hook">fishing rod</item>
+            <item slot="0" enchantment="durability:1" name="`d`lGrapling Hook">fishing rod</item>
             <item slot="2" amount="64">cooked beef</item>
         </kit>
     </class>
