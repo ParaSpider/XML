@@ -13,16 +13,16 @@
 </contributors>
 <destroyables materials="obsidian" completion="100%" repairable="false" sparks="true" mode-changes="false">
     <destroyable name="Yellow Monument" owner="lime">
-        <cuboid min="-47,12,-23" max="-47,11,-23" />
+        <cuboid min="-47,11,-23" max="-46,13,-22"/>
     </destroyable>
     <destroyable name="Orange Monument" owner="lime">
-        <cuboid min="-47,12,23" max="-47,11,23" />
+        <cuboid min="-47,11,23" max="-46,13,24"/>
     </destroyable>
     <destroyable name="Purple Monument" owner="light blue">
-        <cubiod min="47,12,23" max="47,11,23" />
+        <cuboid min="47,11,23" max="48,13,24"/>
     </destroyable>
     <destroyable name="Pink Monument" owner="light blue">
-        <cubiod min="47,12,-23" max="47,11,-23" />
+        <cuboid min="47,11,-23" max="48,13,-24"/>
     </destroyable>
 </destroyables>
 <teams>
@@ -91,7 +91,7 @@
     </union>
 </regions>
 <itemremove>
-    <item dmagae="1">wood</item>
+    <item damage="1">wood</item>
     <item damage="5">wood</item>
     <item>log</item>
     <item>dark oak stairs</item>
@@ -112,7 +112,7 @@
     <tool>leather leggings</tool>
 </toolrepair>
 <killreward>
-    <item>gunpowder</item>
+    <item>sulphur</item>
 </killreward>
 <maxbuildheight>24</maxbuildheight>
 </map>
