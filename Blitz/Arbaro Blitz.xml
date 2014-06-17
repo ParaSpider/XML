@@ -1,6 +1,6 @@
-<map proto="1.3.1">
+<map proto="1.3.3">
 <name>Arbaro Blitz</name>
-<version>1.0.0</version>
+<version>1.0.1</version>
 <objective>
     Eliminate the other team within 5 minutes!
 </objective>
@@ -21,7 +21,7 @@
     <time>5m</time>
 </blitz>
 <timelock>on</timelock>
-    <kits>
+<kits>
     <kit name="spawn">
         <item slot="0">iron axe</item>
         <item slot="1">bow</item>
@@ -48,7 +48,7 @@
     <default yaw="180">
         <block>55.5,73,56.5</block>
     </default>
-    </spawns>
+</spawns>
 <regions>
     <apply block="deny-all">
         <rectangle min="-oo,-oo" max="oo,oo"/>
