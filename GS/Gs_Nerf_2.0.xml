@@ -44,7 +44,7 @@
         </kit>
     </class>
     <class name="Alchemist" description="Throw various helpful/harmful potions!" longdescription="A variety of potions that include poision, instant damage II, instant health II, and revealing!" icon="potion">
-            <kit parents="potions">
+        <kit parents="potions">
             <item slot="0" amount="3" damage="16388">potion</item>
             <!--  poision I  -->
             <item slot="1" amount="3" damage="16428">potion</item>
@@ -54,7 +54,7 @@
             <item slot="4" amount="2" damage="16430" potions="invisibility:100:1:false" name="Splash Potion of Revealing">potion</item>
             <!--  invisibility II  -->
             <item slot="5" amount="64">cooked beef</item>
-            </kit>
+        </kit>
     </class>
     <class name="Spawner" description="Spawn slimes, creepers, and more!" longdescription="Scare your enemies with slimes, creepers, skeletons, and zombies!" icon="monster egg">
         <kit parents="potions">
@@ -63,7 +63,7 @@
             <!-- Skeleton -->
             <item slot="1" amount="2" damage="51">monster egg</item>
             <!---Zombie -->
-            <item slot="3" amount="3" damage="54">monster egg</item>
+            <item slot="3" amount="2" damage="54">monster egg</item>
             <!-- Creeper -->
             <item slot="4" amount="1" damage="50">monster egg</item>
             <item slot="5" amount="64">cooked beef</item>
@@ -90,7 +90,7 @@
         <permission>grenades.use</permission>
         <kit parents="potions">
             <item slot="0" amount="5" name="`4`lLand Mine">tnt</item>
-            <item slot="2" amount="5" name="`3Grenade">fireball</item>
+            <item slot="2" amount="8" name="`3Grenade">fireball</item>
             <item slot="3" amount="64">cooked beef</item>
         </kit>
     </class>
@@ -112,7 +112,7 @@
             <potion duration="oo" amplifier="2" ambient="true">jump</potion>
             <potion duration="oo" amplifier="1" ambient="true">speed</potion>
             <potion duration="300" amplifier="2" ambient="true">invisibility</potion>
-            <item slot="0" enchantment="durability:1"name="`d`lGrapling Hook" attributes="generic.attackDamage:base:1.0">fishing rod</item>
+            <item slot="0" enchantment="durability:1" name="`d`lGrapling Hook" attributes="generic.attackDamage:base:1.0">fishing rod</item>
             <item slot="2" amount="64">cooked beef</item>
         </kit>
     </class>
@@ -122,7 +122,7 @@
     <broadcastLives>false</broadcastLives>
     <title>Ghost Squadron</title>
 </blitz>
-</ghostsquadron>
+<ghostsquadron/>
 <mobs>
     <filter parents="deny-all">
         <allow>
